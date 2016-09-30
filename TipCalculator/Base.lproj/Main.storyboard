@@ -19,6 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_background" translatesAutoresizingMaskIntoConstraints="NO" id="1kV-TW-Xpe"/>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shW-bS-wLH">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -26,11 +27,13 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfQ-H6-nJi">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjq-EU-x48">
-                                <state key="normal" title="Calculate the Tip"/>
+                                <state key="normal" title="Calculate the Tip">
+                                    <color key="titleColor" red="1" green="0.56364584096662518" blue="0.040454951572592157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="calculateTipPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZt-WX-Ye3"/>
                                 </connections>
@@ -40,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="28" id="GH1-Ux-ZXS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lkK-al-VoZ">
@@ -49,6 +52,7 @@
                                     <segment title="10%"/>
                                     <segment title="15%"/>
                                 </segments>
+                                <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="tipPercentageValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wnm-1X-UyK"/>
                                 </connections>
@@ -56,12 +60,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1kV-TW-Xpe" secondAttribute="trailing" id="9wg-yP-Giy"/>
                             <constraint firstItem="XfQ-H6-nJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D19-2h-zwT"/>
+                            <constraint firstItem="1kV-TW-Xpe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DM1-bh-bTt"/>
                             <constraint firstItem="XfQ-H6-nJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="FYZ-m4-yoX"/>
                             <constraint firstItem="shW-bS-wLH" firstAttribute="leading" secondItem="cjq-EU-x48" secondAttribute="leading" id="Fkw-5p-JxY"/>
                             <constraint firstItem="lkK-al-VoZ" firstAttribute="trailing" secondItem="QMR-aB-nY9" secondAttribute="trailing" id="LZX-7w-fW9"/>
                             <constraint firstItem="cjq-EU-x48" firstAttribute="top" secondItem="shW-bS-wLH" secondAttribute="bottom" constant="18" id="PX7-cx-vot"/>
                             <constraint firstItem="shW-bS-wLH" firstAttribute="trailing" secondItem="cjq-EU-x48" secondAttribute="trailing" id="Ubz-DH-QGO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1kV-TW-Xpe" secondAttribute="bottom" id="c85-fh-sTP"/>
                             <constraint firstItem="XfQ-H6-nJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="cWF-Ad-QNn"/>
                             <constraint firstItem="QMR-aB-nY9" firstAttribute="top" secondItem="lkK-al-VoZ" secondAttribute="bottom" constant="29" id="hhF-4r-0t6"/>
                             <constraint firstItem="shW-bS-wLH" firstAttribute="top" secondItem="XfQ-H6-nJi" secondAttribute="bottom" constant="16" id="jBx-qR-O66"/>
@@ -69,6 +76,7 @@
                             <constraint firstItem="XfQ-H6-nJi" firstAttribute="leading" secondItem="shW-bS-wLH" secondAttribute="leading" id="nmL-Ss-hRA"/>
                             <constraint firstItem="cjq-EU-x48" firstAttribute="trailing" secondItem="lkK-al-VoZ" secondAttribute="trailing" id="pIn-He-QXh"/>
                             <constraint firstItem="XfQ-H6-nJi" firstAttribute="trailing" secondItem="shW-bS-wLH" secondAttribute="trailing" id="pVQ-ig-bvF"/>
+                            <constraint firstItem="1kV-TW-Xpe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pnD-1s-yqh"/>
                             <constraint firstItem="cjq-EU-x48" firstAttribute="leading" secondItem="lkK-al-VoZ" secondAttribute="leading" id="v1y-FG-7LN"/>
                             <constraint firstItem="lkK-al-VoZ" firstAttribute="leading" secondItem="QMR-aB-nY9" secondAttribute="leading" id="xKB-ya-MG3"/>
                         </constraints>
@@ -83,4 +91,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app_background" width="357" height="439"/>
+    </resources>
 </document>
