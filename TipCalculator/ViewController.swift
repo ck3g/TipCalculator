@@ -27,16 +27,7 @@ class ViewController: UIViewController {
 
     // IBActions
     @IBAction func calculateTipPressed(_ sender: UIButton) {
-        guard let billTotal = tipAmountTextField.text else {
-            return
-        }
-
-        guard let safeBillTotal = Double(billTotal) else {
-            return
-        }
-
-        let tipAmount = safeBillTotal * tipPercentage
-        tipTotalLabel.text = "Tip: \(tipAmount)"
+        calculateTip()
     }
 
     @IBAction func tipPercentageValueDidChange(_ sender: UISegmentedControl) {
@@ -52,6 +43,23 @@ class ViewController: UIViewController {
         default:
             tipPercentage = 0.2
         }
+
+        calculateTip()
+    }
+
+    // Helper Methods
+
+    func calculateTip() {
+        guard let billTotal = tipAmountTextField.text else {
+            return
+        }
+
+        guard let safeBillTotal = Double(billTotal) else {
+            return
+        }
+
+        let tipAmount = safeBillTotal * tipPercentage
+        tipTotalLabel.text = "Tip: \(tipAmount)"
     }
 
 }
