@@ -59,7 +59,8 @@ class ViewController: UIViewController {
         }
 
         let tipAmount = safeBillTotal * tipPercentage
-        tipTotalLabel.text = "Tip: \(tipAmount)"
+        let formattedDouble = String(format: "%.02f", tipAmount)
+        tipTotalLabel.text = "Tip: \(formattedDouble)"
     }
 
 }
