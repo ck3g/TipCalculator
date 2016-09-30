@@ -37,27 +37,40 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-aB-nY9">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="zqS-6f-aEd"/>
+                                    <constraint firstAttribute="height" constant="28" id="GH1-Ux-ZXS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lkK-al-VoZ">
+                                <segments>
+                                    <segment title="5%"/>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tipPercentageValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wnm-1X-UyK"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="shW-bS-wLH" firstAttribute="leading" secondItem="cjq-EU-x48" secondAttribute="leading" id="3Qp-jz-P21"/>
-                            <constraint firstItem="shW-bS-wLH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5VK-va-xrF"/>
-                            <constraint firstItem="cjq-EU-x48" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Oj-jl-TXn"/>
-                            <constraint firstItem="shW-bS-wLH" firstAttribute="top" secondItem="XfQ-H6-nJi" secondAttribute="bottom" constant="16" id="EZY-ad-XLj"/>
-                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="leading" secondItem="shW-bS-wLH" secondAttribute="leading" id="UK0-eY-RdS"/>
-                            <constraint firstItem="QMR-aB-nY9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dZb-SU-sjW"/>
-                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="ehH-LN-7jU"/>
-                            <constraint firstItem="QMR-aB-nY9" firstAttribute="leading" secondItem="cjq-EU-x48" secondAttribute="leading" id="fLN-av-15M"/>
-                            <constraint firstItem="QMR-aB-nY9" firstAttribute="top" secondItem="cjq-EU-x48" secondAttribute="bottom" constant="19" id="gug-vX-Yxs"/>
-                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hPO-Dg-esL"/>
-                            <constraint firstItem="cjq-EU-x48" firstAttribute="top" secondItem="shW-bS-wLH" secondAttribute="bottom" constant="18" id="kpq-Vd-6LM"/>
-                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="skN-mG-b9Y"/>
+                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D19-2h-zwT"/>
+                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="FYZ-m4-yoX"/>
+                            <constraint firstItem="shW-bS-wLH" firstAttribute="leading" secondItem="cjq-EU-x48" secondAttribute="leading" id="Fkw-5p-JxY"/>
+                            <constraint firstItem="lkK-al-VoZ" firstAttribute="trailing" secondItem="QMR-aB-nY9" secondAttribute="trailing" id="LZX-7w-fW9"/>
+                            <constraint firstItem="cjq-EU-x48" firstAttribute="top" secondItem="shW-bS-wLH" secondAttribute="bottom" constant="18" id="PX7-cx-vot"/>
+                            <constraint firstItem="shW-bS-wLH" firstAttribute="trailing" secondItem="cjq-EU-x48" secondAttribute="trailing" id="Ubz-DH-QGO"/>
+                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="cWF-Ad-QNn"/>
+                            <constraint firstItem="QMR-aB-nY9" firstAttribute="top" secondItem="lkK-al-VoZ" secondAttribute="bottom" constant="29" id="hhF-4r-0t6"/>
+                            <constraint firstItem="shW-bS-wLH" firstAttribute="top" secondItem="XfQ-H6-nJi" secondAttribute="bottom" constant="16" id="jBx-qR-O66"/>
+                            <constraint firstItem="lkK-al-VoZ" firstAttribute="top" secondItem="cjq-EU-x48" secondAttribute="bottom" constant="19" id="mtw-bV-JPT"/>
+                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="leading" secondItem="shW-bS-wLH" secondAttribute="leading" id="nmL-Ss-hRA"/>
+                            <constraint firstItem="cjq-EU-x48" firstAttribute="trailing" secondItem="lkK-al-VoZ" secondAttribute="trailing" id="pIn-He-QXh"/>
+                            <constraint firstItem="XfQ-H6-nJi" firstAttribute="trailing" secondItem="shW-bS-wLH" secondAttribute="trailing" id="pVQ-ig-bvF"/>
+                            <constraint firstItem="cjq-EU-x48" firstAttribute="leading" secondItem="lkK-al-VoZ" secondAttribute="leading" id="v1y-FG-7LN"/>
+                            <constraint firstItem="lkK-al-VoZ" firstAttribute="leading" secondItem="QMR-aB-nY9" secondAttribute="leading" id="xKB-ya-MG3"/>
                         </constraints>
                     </view>
                     <connections>

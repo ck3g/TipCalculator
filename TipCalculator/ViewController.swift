@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     // Instance Properties & Outlets
-    let tipPercentage = 0.20
+    var tipPercentage = 0.10
     @IBOutlet weak var tipTotalLabel: UILabel!
     @IBOutlet weak var tipAmountTextField: UITextField!
 
@@ -39,6 +39,20 @@ class ViewController: UIViewController {
         tipTotalLabel.text = "Tip: \(tipAmount)"
     }
 
+    @IBAction func tipPercentageValueDidChange(_ sender: UISegmentedControl) {
+        let selectedIndex = sender.selectedSegmentIndex
+
+        switch selectedIndex {
+        case 0:
+            tipPercentage = 0.05
+        case 1:
+            tipPercentage = 0.1
+        case 2:
+            tipPercentage = 0.15
+        default:
+            tipPercentage = 0.2
+        }
+    }
 
 }
 
