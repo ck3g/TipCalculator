@@ -31,6 +31,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjq-EU-x48">
                                 <state key="normal" title="Calculate the Tip"/>
+                                <connections>
+                                    <action selector="calculateTipPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZt-WX-Ye3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-aB-nY9">
                                 <constraints>
@@ -57,6 +60,10 @@
                             <constraint firstItem="XfQ-H6-nJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="skN-mG-b9Y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tipAmountTextField" destination="shW-bS-wLH" id="icQ-pI-RDv"/>
+                        <outlet property="tipTotalLabel" destination="QMR-aB-nY9" id="i2U-nY-lVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
